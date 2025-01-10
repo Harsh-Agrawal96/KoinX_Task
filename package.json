@@ -1,0 +1,21 @@
+{
+  "name": "koinx_task",
+  "version": "1.0.0",
+  "description": "The repo which has the KoinX backend assignment solution for internship",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "Harsh Agrawal",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "koinx_task": "file:",
+    "mongoose": "^8.9.4",
+    "nodemon": "^3.1.9"
+  }
+}
