@@ -6,6 +6,7 @@ let Route = express.Router();
 
 let allV1Routes = (app) => {
 
+    // background job initiates(can call background job from this api)
     Route.get("/store", storeRequestedCurrency );
 
     Route.get("/stats", queryRecord.getLastRecord );

@@ -21,6 +21,8 @@ let getCurrencyDetails = async ( currency ) => {
     });
 };
 
+
+// background job(store in db)
 let storeRequestedRecord = async ( currencyDetail, currencyData ) => {
 
     return new Promise( async (resolve,reject) => {
