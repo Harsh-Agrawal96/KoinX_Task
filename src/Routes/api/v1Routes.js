@@ -8,7 +8,9 @@ let allV1Routes = (app) => {
 
     Route.get("/store", storeRequestedCurrency );
 
-    Route.get("/stats", queryRecord.getLastRecord )
+    Route.get("/stats", queryRecord.getLastRecord );
+
+    Route.get("/deviation", queryRecord.coinLatestRecord);
 
     return app.use("/",Route);
 };
