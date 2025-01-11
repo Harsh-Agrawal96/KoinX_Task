@@ -6,7 +6,17 @@ import { deviationApiLimit } from "../utils/variable.js";
 let getLastRecord = async (req,res) => {
 
     try{
-        const coin = req.body.coin;
+        let coin;
+        if( req.body.coin){
+            coin = req.body.coin;
+        }
+        if( req.query.coin){
+            coin = req.query.coin;
+        }
+        if( !coin ){
+            return res.status(404).json({ message : "Invalid query" })
+        }
+
         const coinDetail = await getcoinName(coin);
         if( !coinDetail ){
             return res.status(500).json({ message : "Something went wrong" });
@@ -30,7 +40,13 @@ let getLastRecord = async (req,res) => {
 let coinLatestRecord = async (req,res) => {
 
     try{
-        const coin = req.body.coin;
+        let coin;
+        if( req.body.coin){
+            coin = req.body.coin;
+        }
+        if( req.query.coin){
+            coin = req.query.coin;
+        }
         const coinDetail = await getcoinName(coin);
         if( !coinDetail ){
             return res.status(500).json({ message : "Something went wrong" });
