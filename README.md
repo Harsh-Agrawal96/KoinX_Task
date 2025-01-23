@@ -31,18 +31,13 @@ The server-side application built with Node.js and MongoDB, which fetches crypto
 
 ## API Endpoints
 
-### 1. `/stats`
+### 1. **/stats**
     Retrieves the latest data price and market cap in usd and 24h change for a specified cryptocurrency.
 
 #### Query Params:
 - `coin`: One of `bitcoin`, `ethereum`, or `matic-network`.
     you use use other coins but add the coin Coingecko id and coin name on cryptoCurrency model of database
     and also add coin name on "currency" array on /src/utils/variable.js (so that the data of that coin can add in database through the background job)
-
-#### Sample Request:
-    ```bash
-    GET https://koin-x-task-ivory.vercel.app/stats?coin=bitcoin
-    ```
 
 #### Sample Response:
     ```json
@@ -53,18 +48,13 @@ The server-side application built with Node.js and MongoDB, which fetches crypto
     }
     ```
 
-### 2. `/deviation`
+### 2. **/deviation**
     Calculates the standard deviation of the price for the last 100 records of a specified cryptocurrency.
 
 #### Query Params:
 - `coin`: One of `bitcoin`, `ethereum`, or `matic-network`.
     you use use other coins but add the coin Coingecko id and coin name on cryptoCurrency model of database
     and also add coin name on "currency" array on /src/utils/variable.js (so that the data of that coin can add in database through the background job)
-
-#### Sample Request:
-    ```bash
-    GET https://koin-x-task-ivory.vercel.app/deviation?coin=bitcoin
-    ```
 
 #### Sample Response:
     ```json
@@ -73,13 +63,8 @@ The server-side application built with Node.js and MongoDB, which fetches crypto
     }
     ```
 
-### 3. `/store`
+### 3. **/store**
     Call the background job once in every 2 hour.
-
-#### Sample Request:
-    ```bash
-    GET https://koin-x-task-ivory.vercel.app/store
-    ```
 
 #### Sample Response:
     ```json
