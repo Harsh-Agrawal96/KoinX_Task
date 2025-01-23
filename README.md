@@ -40,13 +40,11 @@ The server-side application built with Node.js and MongoDB, which fetches crypto
     and also add coin name on "currency" array on /src/utils/variable.js (so that the data of that coin can add in database through the background job)
 
 #### Sample Response:
-    ```json
     {
     "price": 40000,
     "marketCap": 800000000,
     "24hChange": 3.4
     }
-    ```
 
 ### 2. **/deviation**
     Calculates the standard deviation of the price for the last 100 records of a specified cryptocurrency.
@@ -57,21 +55,17 @@ The server-side application built with Node.js and MongoDB, which fetches crypto
     and also add coin name on "currency" array on /src/utils/variable.js (so that the data of that coin can add in database through the background job)
 
 #### Sample Response:
-    ```json
     {
     "deviation": 4082.48
     }
-    ```
 
 ### 3. **/store**
     Call the background job once in every 2 hour.
 
 #### Sample Response:
-    ```json
     {
     "message" : "Fetched data and stored in db successfully"
     }
-    ```
 
 ---
 
